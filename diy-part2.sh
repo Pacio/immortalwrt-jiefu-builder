@@ -135,6 +135,8 @@ if grep -q "CONFIG_PACKAGE_luci-app-honk=y" .config 2>/dev/null || grep -q "CONF
   fi
 fi
 
+# 10. 修改lan
+sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
 # 11. JSON 语法自检门禁
 echo "--> 正在执行 JSON 语法自检门禁..."
