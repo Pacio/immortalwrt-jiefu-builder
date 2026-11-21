@@ -30,6 +30,10 @@ echo "--> 正在同步外部自定义插件仓库..."
 [ ! -d "package/custom-apps/openwrt-daede" ] && git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom-apps/openwrt-daede || true
 [ ! -d "package/custom-apps/rtp2httpd" ] && git clone --depth=1 https://github.com/stackia/rtp2httpd.git package/custom-apps/rtp2httpd || true
 [ ! -d "package/custom-apps/openwrt-honk" ] && git clone --depth=1 https://github.com/kenzok8/openwrt-honk.git package/custom-apps/openwrt-honk || true
+[ ! -d "package/custom-apps/openwrt-mosdns" ] && git clone --depth=1 https://github.com/sbwml/luci-app-mosdns.git package/custom-apps/openwrt-mosdns || true
+[ ! -d "package/custom-apps/openwrt-podman" ] && git clone --depth=1 https://github.com/Zerogiven-OpenWRT-Packages/luci-app-podman.git package/custom-apps/openwrt-podman || true
+
+
 
 # 同步 Passwall 官方维护的最权威 Loyalsoldier v2ray-geodata 规则包 (支持 telegram 标签)
 echo "--> 正在同步 Loyalsoldier v2ray-geodata 规则包定义..."
