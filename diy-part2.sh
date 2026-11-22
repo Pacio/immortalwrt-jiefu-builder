@@ -138,6 +138,9 @@ fi
 # 10. 修改lan
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
+# 10.1 解决rust编译报错问题
+sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
+
 # 11. JSON 语法自检门禁
 echo "--> 正在执行 JSON 语法自检门禁..."
 python3 -c "
