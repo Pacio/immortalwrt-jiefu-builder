@@ -12,9 +12,6 @@ echo "=================================================="
 # 1. 解除官方 Feeds 的 Commit 静态锁定，全面跟踪 openwrt-25.12 官方最新维护分支以获取最新包修复
 sed -i -E 's/\^[0-9a-fA-F]+/;openwrt-25.12/g' feeds.conf.default
 
-# 1.1 解决rust编译报错问题
-sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
-
 # 2. 准备 package/custom-apps 目录
 mkdir -p package/custom-apps
 
